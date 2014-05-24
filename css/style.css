@@ -1,0 +1,56 @@
+.wrapper {
+	width: 1004px;
+	height: 980px;
+	background-color: #cccccc;
+	margin-left: auto;
+	margin-right: auto;
+	border: 0;
+}
+.header {
+	width: 1000px;
+	height: 65px;
+
+}
+.headerTitle {
+	display: inline-block;
+	width: 480px;
+	height: 40px;
+	padding-top: 20px;
+	border: 0;
+	text-align: center;
+	color: #4A4A4A;
+	font-family: chelsea market,fantasy; /*Might require https://www.google.com/fonts/specimen/Chelsea+Market */
+	font-weight: bold;
+	font-size: 14pt;
+}
+.nav {
+	display: inline-block;
+	width: 500px;
+	border: 0;
+}
+.nav ul {
+	margin: 0;
+	margin-top: 20px
+}
+.nav li {
+	display: inline;
+}
+.slideshow {
+	width: 1000px;
+	height: 450px;
+	background-color: #ffffff;
+}
+.mainContent {
+	width: 1000px;
+	height: 400px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+.footer {
+	width: 1000px;
+	height: 65px;
+	background-color: #ffffff;
+}
+
+div {
+	border: 2px solid black;
+}
