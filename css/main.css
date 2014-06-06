@@ -180,6 +180,23 @@ h2,p,a {
     margin-top: 23px;
 }
 
+/*Catergory Page Specific*/
+.catLeft, .catMiddle, .catRight {
+    width: 300px;
+    height: 300px;
+    margin-right: 20px;
+    background-color: #ffffff;
+    display: inline-block;
+}
+.catLeft {
+    margin-left: 20px;
+}
+.catMiddle {
+
+}
+.catRight {
+
+}
 
 /* ==========================================================================
    Media Queries
