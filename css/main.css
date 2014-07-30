@@ -197,7 +197,8 @@ h2,p,a {
     height: 230px;
     margin-top: 10px;
     margin-right: 20px;
-    background-color: #ffffff;
+    margin-bottom: 20px;
+    background-color: #F3F3F3;
     display: inline-block;
     -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
@@ -212,7 +213,80 @@ h2,p,a {
 .catRight {
 
 }
+.portfolioHeader {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 19px;
+    font-family: 'Open Sans', sans-serif;
+    color: #717070;
+    font-weight: normal;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.catDescription {
+    margin-top: 0px;
+    font-size: 14px;
+    font-family: arial, sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
+/* Portfolio Page */
+.portfolioSection {
+    width: 940px;
+    min-height: 342px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    position: relative;
+    background-color: #F3F3F3;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
+}
+.portfolioSection .left {
+    width: 618px; 
+    display: inline-block;
+    vertical-align: bottom;
+}
+.portfolioSection .right {
+    width: 315px;
+    display: inline-block;
+    float: right;
+    font-size: 14px;
+    font-family: arial, sans-serif;
+}
+.portfolioSection h3 {
+    margin: 0;
+    font-size: 20px;
+}
+.portfolioSection ul {
+    margin: 0;
+}
+.portfolioSection iframe {
+    display: block;
+}
+.newButton {
+    -moz-box-shadow:inset 0px -4px 9px 0px #ffffff;
+    -webkit-box-shadow:inset 0px -4px 9px 0px #ffffff;
+    box-shadow:inset 0px -4px 9px 0px #ffffff;
+    background-color:#ededed;
+    display:inline-block;
+    cursor:pointer;
+    color:#000;
+    font-family:arial;
+    font-size:18px;
+    padding:11px 17px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+}
+.newButton:hover {
+    background-color:#dedede;
+}
+.newButton:active {
+    position:relative;
+    top:1px;
+}
 /* About Picture */
 .aboutPicture {
     margin-left: 30px;
