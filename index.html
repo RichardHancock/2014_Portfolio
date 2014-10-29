@@ -28,21 +28,36 @@
 				</div>
 				<div class="nav">
 					<ul>
+						<a href="index.html">
+							<li>Home</li>
+						</a>
 						<li>
-							<a href="index.html">Home</a>
-						</li>
-						<li>
-							<a href="portfolio.html">Portfolio</a>
-						</li>
-						<li>
-							<a href="about.html">About</a>
-						</li>
-						<li>
-							<a href="cv.html">CV</a>
-						</li>
-						<li>
-							<a href="contact.html">Contact</a>
-						</li>
+						    <a href="portfolio.html">Portfolio</a>
+						    <ul>
+					      		<a href="portfolio/programming.html">
+					      			<li>Programming</li>
+					      		</a>
+					      		<a href="portfolio/web.html">
+					      			<li>Web Development</li>
+					      		</a>
+					      		<a href="portfolio/other.html">
+					      			<li>Other Skills</li>
+					      		</a>
+					    	</ul>
+					 	</li>
+						<a href="about.html">
+					 		<li>About</li>
+					 	</a>
+					 	<a href="#" onclick="alert('Coming Soon')">
+					 		<!--Future-->
+					 		<li>Blog</li>
+					 	</a>
+					 	<a href="cv.html">
+					 		<li>CV</li>
+					 	</a>
+					 	<a href="contact.php">
+					  		<li>Contact</li>
+					  	</a>
 					</ul>
 				</div>
 			</div>
@@ -92,10 +107,7 @@
 		
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-
         <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

@@ -60,6 +60,11 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+a {color:black; text-decoration:none;}      /* unvisited link */
+a:visited {color:black; text-decoration:none;}  /* visited link */
+a:hover {color:black; text-decoration:none;}  /* mouse over link */
+a:active {color:black; text-decoration:none;}  /* selected link */
+
 .wrapper {
 	width: 1000px;
 	background-color: #cccccc;
@@ -87,19 +92,81 @@ body {
 	font-weight: bold;
 	font-size: 14pt;
 }
+
+/*Nav*/
 .nav {
-	display: inline-block;
-	width: 500px;
-	border: 0;
+    display: block;
+    position: absolute;
+    width: 500px;
+    border: 0;
+    left: 734px;
+    top: 8px;
+    z-index: 1000;
 }
+
+/*New Nav by Josh Riser http://cssdeck.com/labs/another-simple-css3-dropdown-menu*/
 .nav ul {
-	margin: 0;
-	margin-top: 20px
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
-.nav li {
-	display: inline;
-    margin-left: 20px;
+.nav ul li {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -5px;
+  position: relative;
+  padding: 15px 20px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
+.nav ul li:hover {
+  background: #555;
+  color: #fff;
+}
+.nav ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+.nav ul li ul li { 
+  background: #555; 
+  display: block; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+.nav ul li ul li:hover { 
+    background: #666; 
+}
+.nav ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+/*End of Nav*/
+
 .slideshow {
 	width: 1000px;
 	height: 450px;
