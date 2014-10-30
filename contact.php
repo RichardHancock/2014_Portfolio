@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
+        
 		<link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
 		
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -19,10 +20,22 @@
     <body>
 
         <?php
+
+        //For ease of commiting to git without exposing these keys I am reading them in from text
+        $keyFile = fopen(".dontDelete/recaptchaKeys.txt", "r") or die("Unable to open file!");
+
         //Settings
-        $privatekey = ""; //Change to your own key
-        $publickey = ""; //Change to your own key
-        $mailTo = ""; // Change to your own email address
+        $privatekey = fgets($keyFile); //Change to your own key
+        $publickey = fgets($keyFile); //Change to your own key
+        $mailTo = fgets($keyFile); // Change to your own email address
+        //Didn't add error checking as this content will never change
+        
+        fclose($keyFile);
+
+        //Removing blank character at end of strings
+        $privatekey = substr($privatekey, 0, -1);
+        $publickey = substr($publickey, 0, -1);
+        $mailTo = substr($mailTo, 0, -1);
 
         // type of form input; isTextarea is a bool which handles a special case
         // TODO: There must be a better way to do this.
@@ -133,7 +146,7 @@
             $errors['Email'] = !hasContent($formData['Email']) || !isValidEmail($formData['Email']);
             $errors['Subject'] = !hasContent($formData['Subject']);
             $errors['Message'] = !hasContent($formData['Message']);
-
+            var_dump($errorCount);
             // Final check and Sending the Email
             if ($errorCount == 0) {
                 //Email Construction
@@ -224,18 +237,31 @@
 					<h2>Contact Me</h2>
 					<p>
 						Feel free to contact me using the provided contact form
-						any comments or queries. NOT FUNCTIONAL YET
+						any comments or queries.
 					</p>
 				</div>
+
+                <script type="text/javascript">
+                    //Changes the theme for Recaptcha
+                    var RecaptchaOptions = {theme : 'clean'};
+                </script>
 				<form name="contact" action="contact.php" method="post">
-					<div class="left">
-						<input required type="text" name="Name" <?php echo(displayFormError('Name',false)); ?>
-						<input required type="email" name="Email" <?php echo(displayFormError('Email',false)); ?>
-						<input required type="text" name="Subject" <?php echo(displayFormError('Subject',false)); ?>
-					</div>
-					<div class="right">
-						<textarea required name="Message" <?php echo(displayFormError('Message',true)); ?>
-					</div>
+    				<div>
+                        <div class="left">
+    						<input required type="text" name="Name" <?php echo(displayFormError('Name',false)); ?>
+    						<input required type="email" name="Email" <?php echo(displayFormError('Email',false)); ?>
+                            <div>
+                                <?php
+                                    require_once('recaptchalib.php');
+                                    echo recaptcha_get_html($publickey);
+                                ?>
+                            </div>
+    					</div>
+    					<div class="right">
+                            <input required type="text" name="Subject" <?php echo(displayFormError('Subject',false)); ?>
+    						<textarea required name="Message" <?php echo(displayFormError('Message',true)); ?>
+    					</div>
+                    </div>
 					<span class="error">
                         <?php
                         if($errors['Captcha']) {
@@ -249,6 +275,7 @@
                         }
                         ?>
 					</span>
+                    <input type="hidden" name="Submitted" value=1>
 					<input class="button" type="submit" value="Send">
 				</form>
 			</div>

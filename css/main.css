@@ -389,15 +389,16 @@ h2,p,a {
     font-family: arial, sans-serif;
     font-size: 14px;
 }
+
 form {
-    width: 829px;
+    width: 880px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
 }
 form .left {
     display: inline-block;
-    width: 412px;
+    width: 450px;
     margin: 0;
 }
 form .right {
@@ -405,7 +406,17 @@ form .right {
     width: 411px;
     float: right;
 }
-.left input {
+#recaptcha_widget_div {
+    background-color: white;
+    width:442px;
+}
+.error {
+    border-color: red;
+}
+.formInput {
+    border-color: black;
+}
+input {
     border: 0;
     border-radius: 5px;
     display: block;
@@ -440,8 +451,6 @@ textarea {
     background-color: #717070;
     color: white;
     font-size: 15px;
-
-
     -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
