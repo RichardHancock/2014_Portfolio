@@ -60,10 +60,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-a {color:black; text-decoration:none;}      /* unvisited link */
-a:visited {color:black; text-decoration:none;}  /* visited link */
-a:hover {color:black; text-decoration:none;}  /* mouse over link */
-a:active {color:black; text-decoration:none;}  /* selected link */
 
 .wrapper {
 	width: 1000px;
@@ -78,7 +74,7 @@ body {
 .header {
 	width: 1000px;
 	height: 65px;
-
+    position: relative;
 }
 .headerTitle {
 	display: inline-block;
@@ -97,9 +93,8 @@ body {
 .nav {
     display: block;
     position: absolute;
-    width: 500px;
     border: 0;
-    left: 734px;
+    right: 0px;
     top: 8px;
     z-index: 1000;
 }
@@ -132,7 +127,7 @@ body {
 .nav ul li:hover {
   background: #555;
   color: #fff;
-}
+} 
 .nav ul li ul {
   padding: 0;
   position: absolute;
@@ -165,6 +160,11 @@ body {
   opacity: 1;
   visibility: visible;
 }
+.nav a {color:black; text-decoration:none;}      /* unvisited link */
+.nav a:visited {color:black; text-decoration:none;}  /* visited link */
+.nav a:hover {color:black; text-decoration:none;}  /* mouse over link */
+.nav a:active {color:black; text-decoration:none;}  /* selected link */
+
 /*End of Nav*/
 
 .slideshow {
@@ -259,27 +259,36 @@ h2,p,a {
 }
 
 /*Catergory Page Specific*/
+.catergories {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 235px;
+    position: relative;
+}
+.catergories a {
+    display: block;
+}
+
 .catLeft, .catMiddle, .catRight {
     width: 300px;
     height: 230px;
-    margin-top: 10px;
-    margin-right: 20px;
-    margin-bottom: 20px;
     background-color: #F3F3F3;
-    display: inline-block;
+    display: block;
+    position: absolute;
     -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
 }
 .catLeft {
-    margin-left: 20px;
+    left: 25px;
 }
 .catMiddle {
-
+    left: 350px;
 }
 .catRight {
-
+    left: 675px;
 }
+
 .portfolioHeader {
     margin-top: 5px;
     margin-bottom: 0px;

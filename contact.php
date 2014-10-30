@@ -176,7 +176,7 @@
                         <a href="index.html">
                             <li>Home</li>
                         </a>
-                        <li>
+                        <li onclick="window.location = 'portfolio.html'">
                             <a href="portfolio.html">Portfolio</a>
                             <ul>
                                 <a href="portfolio/programming.html">
