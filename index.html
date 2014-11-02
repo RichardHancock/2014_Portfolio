@@ -10,9 +10,11 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="author" href="humans.txt">
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
 		<link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
 		
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -62,30 +64,46 @@
 				</div>
 			</div>
 			<div class="slideshow">
-				<div class="cycle-slideshow" data-cycle-loader=true>
+				<ul class="cycle-slideshow" data-cycle-loader=true data-cycle-slides="li">
 
 					<div class="cycle-overlay"></div>
-					
-				    <img src="http://dummyimage.com/1000x450/aaa/fff.jpg"
-				    data-cycle-title="Image 1" 
-        			data-cycle-desc="Words and stuff">
+					<div class="cycle-next"><div>Next</div></div>
+					<div class="cycle-prev"><div>Prev</div></div>
 
-				    <img src="http://dummyimage.com/1000x450/555/000.jpg"data-cycle-title="Image 2" 
-        			data-cycle-desc="Sonnenberg Gardens">
+				    <li
+				    	data-cycle-title="Image 1" 
+        				data-cycle-desc="Words and stuff">
+        				<a href="#">
+        					<img src="http://dummyimage.com/1000x450/aaa/fff.jpg">
+        				</a>
+        			</li>
 
-				    <img src="res/slideshow/UDKlevel.jpg"
-				    data-cycle-title="Seismic Situation: Unreal Engine 3 Game Level" 
-        			data-cycle-desc="My first ever level created in UDK. I followed a post apocalyptic theme for this project.">
+				    <li 
+				    	data-cycle-title="Image 2"
+        				data-cycle-desc="Sonnenberg Gardens">
+				    	<a href="#">
+				    		<img src="http://dummyimage.com/1000x450/555/000.jpg">
+				    	</a>
+				    </li>
 
-				    <img src="http://dummyimage.com/1000x450/fff/000.jpg"data-cycle-title="Image 4" 
-        			data-cycle-desc="Sonnenberg Gardens">
-				</div>
+				    <li
+				    	data-cycle-title="Seismic Situation: Unreal Engine 3 Game Level" 
+        				data-cycle-desc="My first ever level created in UDK. I followed a post apocalyptic theme for this project.">
+        				<a href="portfolio/other.html#UDK">
+				    		<img src="res/slideshow/UDKlevel.jpg">
+				    	</a>
+				    </li>
+
+				    <li data-cycle-title="Image 4" data-cycle-desc="Sonnenberg Gardens">
+				    	<img src="http://dummyimage.com/1000x450/fff/000.jpg">
+				    </li>
+				</ul>
 			</div>
 			<div class="mainContent">
 				<div class="skills">
 					<div class="skill1">
 						<h2>Programmer</h2>
-						<img src="http://dummyimage.com/273x156/000/fff.jpg">
+						<img src="res/programming.jpg">
 						<p>
 							I am really pasionate about programming and enjoy it as a hobby and educational focus.
 						</p>
@@ -97,7 +115,7 @@
 					</div>
 					<div class="skill2">
 						<h2>Web Developer</h2>
-						<img src="http://dummyimage.com/273x156/000/fff.jpg">
+						<img src="res/web.jpg">
 						<p>
 							I have been doing web development in my spare time for several years, and have created profesional websites for friends and family.
 						</p>
@@ -108,7 +126,7 @@
 					</div>
 					<div class="skill3">
 						<h2>Other Skills</h2>
-						<img src="http://dummyimage.com/273x156/000/fff.jpg">
+						<img src="res/other.jpg">
 						<p>
 							In addition to my primary skills I have a good understanding of the following:
 							Photoshop, Premiere, Maya, UDK, Server Hosting and Computer Maintenance.

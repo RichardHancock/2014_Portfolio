@@ -511,6 +511,38 @@ textarea {
     display: block;
     width: 100px;
 }
+.PDFlink {
+    color: white;
+    text-decoration: none;
+    
+}
+.PDFbutton {
+    margin-top: 15px;
+    width: 230px;
+    height: 76px;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #CD0000;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
+}
+.PDFicon {
+    margin-top: 3px;
+    width: 70px;
+    height: 70px;
+    background-image: url(../res/pdf.png);
+    float: left;
+    margin-left: 3px;
+}
+.PDFtext {
+    float: left;
+    margin-left: 5px;
+    margin-top: 23px;
+    font-size: 16pt;
+    font-family: 'Ubuntu', sans-serif;
+}
 
 /*
     these are just the default styles used in the Cycle2 demo pages.  
@@ -566,11 +598,60 @@ textarea {
 }
 
 
-/* prev / next links */
-.cycle-prev, .cycle-next { position: absolute; top: 0; width: 30%; opacity: 0; filter: alpha(opacity=0); z-index: 800; height: 100%; cursor: pointer; }
-.cycle-prev { left: 0;  background: url(http://malsup.github.com/images/left.png) 50% 50% no-repeat;}
-.cycle-next { right: 0; background: url(http://malsup.github.com/images/right.png) 50% 50% no-repeat;}
-.cycle-prev:hover, .cycle-next:hover { opacity: .7; filter: alpha(opacity=70) }
+/* prev / next links
+.cycle-prev, .cycle-next { 
+    position: absolute; 
+    top: 0; 
+    width: 30%; 
+    opacity: 0; 
+    filter: alpha(opacity=0); 
+    z-index: 800; 
+    height: 100%; 
+    cursor: pointer; 
+}
+.cycle-prev { 
+    left: 0;
+    background: url(http://malsup.github.com/images/left.png) 50% 50% no-repeat;
+}
+.cycle-next { 
+    right: 0; 
+    background: url(http://malsup.github.com/images/right.png) 50% 50% no-repeat;
+    }
+.cycle-prev:hover, .cycle-next:hover { 
+    opacity: .7; 
+    filter: alpha(opacity=70); 
+}
+*/
+
+.cycle-prev, .cycle-next {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 50px;
+    background-image: url(../res/transparent.png);
+    
+    cursor: pointer;
+    z-index: 800;
+    color: white;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16pt;
+}
+.cycle-next { 
+    right: 0;
+}
+.cycle-prev { 
+    left: 0;
+}
+.cycle-prev:hover, .cycle-next:hover { 
+    background-color: black;
+}
+.cycle-next div {
+    padding-top: 10px;
+}
+.cycle-prev div {
+    padding-top: 10px;
+}
 
 .disabled { opacity: .5; filter:alpha(opacity=50); }
 
@@ -586,14 +667,14 @@ textarea {
 /* 
     media queries 
     some style overrides to make things more pleasant on mobile devices
-*/
+
 
 @media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
     .cycle-slideshow { width: 200px;}
     .cycle-overlay { padding: 4px }
     .cycle-caption { bottom: 4px; right: 4px }
 }
-
+*/
 
 
 /* ==========================================================================
